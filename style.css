@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lobster&family=Mochiy+Pop+P+One&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+#logo {
+  font-family: Lobster;
+  font-size: 140%;
+}
+.navegador {
+  list-style: none;
+  font-family: Dosis;
+  margin-top: 2em;
+}
+.navegador:hover {
+  text-shadow: 0.1em 0.1em 0.05em #85bdbf;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+.inicio__titulo {
+  font-family: "Mochiy Pop P One";
+  text-align: center;
+}
+.inicio__parrafo {
+  font-family: Dosis;
+  text-align: center;
+}
+.nosotros__parrafo {
+  font-family: Dosis;
+}
+.diseños__titulo {
+  font-family: "Mochiy Pop P One";
+  text-align: center;
+}
+.ubicacion__titulo {
+  font-family: "Mochiy Pop P One";
+  text-align: center;
+}
+.ubicacion__direccion {
+  font-family: Dosis;
+  text-align: center;
+  font-weight: bold;
+}
+.ubicacion {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.contacto{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.contacto__titulo{
+  font-family: "Mochiy Pop P One";
+  text-align: center;
+}
+.contacto__campo{
+  height: 2em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 0.4em solid black;
+}
+#campo_de_texto{
+  height: 10em;
+}
+.contacto__boton{
+  text-decoration: none;
+  font-family: Dosis;
+  font-weight: bold;
+  border: 0.25em solid rgb(0, 0, 0);
+}
+*::-webkit-input-placeholder{
+  font-family: Dosis;
+  font-size: 130%;
+  font-weight: bold;
+}
+*::-moz-placeholder{
+  font-family: Dosis;
+  font-size: 130%;
+  font-weight: bold;
+}
+*:-ms-input-placeholder{
+  font-family: Dosis;
+  font-size: 130%;
+  font-weight: bold;
+}
+footer {
+  grid-area: footer;
+  width: auto;
+  height: 6em;
+  background-color: #57737a;
+}
+.footer__logo {
+  font-family: Dosis;
+  font-weight: 100;
+  color: #ffffff;
+}
+.footer__telefono,
+.footer__derechos {
+  line-height: 1;
+  font-family: Roboto;
+  color: #ffffff;
+}
+
+
+@media screen and (min-width: 320px) {
+  #cabecera {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 1em;
+  }
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .navegador {
+    font-size: 120%;
+  }
+  .inicio__texto {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 2em;
+  }
+  .inicio__titulo {
+    font-size: 180%;
+  }
+  .inicio__parrafo {
+    font-size: 150%;
+  }
+  .nosotros__imagen {
+    width: 10em;
+    height: 15em;
+    display: block;
+    margin: auto;
+  }
+  .nosotros__parrafo {
+    font-size: 130%;
+    text-align: center;
+  }
+  .diseños {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .diseños__titulo {
+    margin-top: 2em;
+  }
+  .ubicacion__titulo {
+    margin-top: 1em;
+  }
+  .ubicacion__mapa2 {
+    display: none;
+  }
+  .contacto__titulo{
+    margin-top: 1em;
+  }
+  .contacto__campo{
+    width: 20em;
+  }
+  .contacto__campo{
+    width: 20em;
+  }
+  .contacto__boton{
+    width: 5em;
+    height: 2em;
+    transform: translateX(17em);
+    margin-bottom: 2em;
+  }
+  .footer__logo,
+  .footer__instagram {
+    display: none;
+  }
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 120%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 8em 32em 5em;
+    grid-template-areas: "header" "section" "footer";
+  }
+  #instagram {
+    display: none;
+  }
+  header {
+    grid-area: header;
+    width: auto;
+    height: 4em;
+    margin: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    grid-area: header;
+  }
+  nav {
+    width: 45em;
+    height: 4em;
+  }
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .navegador {
+    font-size: 150%;
+  }
+  section {
+    grid-area: section;
+  }
+  .inicio {
+    background-image: url("./imagenes/circulo_section_index.png");
+    background-size: cover;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+  }
+  .inicio__texto {
+    width: 50em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .inicio__titulo {
+    width: auto;
+    height: 3em;
+    font-size: 220%;
+  }
+  .inicio__parrafo {
+    font-size: 170%;
+  }
+  .nosotros {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .nosotros__imagen {
+    width: 25em;
+    height: 30em;
+  }
+  .nosotros__parrafo {
+    width: 20em;
+    font-size: 180%;
+    margin-top: 1em;
+    margin-right: 2em;
+  }
+  .diseños {
+    padding-top: 3em;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .diseños__titulo {
+    font-size: 200%;
+  }
+  .diseños__imagenes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .ubicacion__mapa1 {
+    display: none;
+  }
+  .ubicacion__mapa2 {
+    display: inline;
+  }
+  .ubicacion__direccion{
+    font-size: 120%;
+    margin-bottom: 2em;
+  }
+  .contacto__titulo{
+    font-size: 220%;
+  }
+  .contacto__campo{
+    width: 40em;
+    height: 2em;
+  }
+  .contacto__boton{
+    width: 5em;
+    height: 1.875em;
+    font-size: 110%;
+    transform: translateX(26.7em);
+}
+  footer {
+    grid-area: footer;
+    width: auto;
+    height: 5em;
+    background-color: #57737a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 1.7;
+  }
+  .footer__logo {
+    display: inline;
+    font-size: 150%;
+    margin-left: -2em;
+  }
+  .footer__telefono {
+    padding-left: 0.5em;
+  }
+  .footer__instagram {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.5em;
+  }
+  .footer__derechos {
+    padding-right: 0.5em;
+  }
+}
