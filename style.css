@@ -3,22 +3,19 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-image: url("./img/marble-4700915_1920.jpg");
+}
 #logo {
   font-family: Lobster;
-  font-size: 140%;
-}
-.navegador {
-  list-style: none;
-  font-family: Dosis;
-  margin-top: 2em;
-}
-.navegador:hover {
-  text-shadow: 0.1em 0.1em 0.05em #85bdbf;
 }
 a {
   text-decoration: none;
   outline: none;
-  color: black;
+  color: black !important;
+}
+.items-personalizados {
+  font-family: Dosis;
 }
 .inicio__titulo {
   font-family: "Mochiy Pop P One";
@@ -30,6 +27,7 @@ a {
 }
 .nosotros__parrafo {
   font-family: Dosis;
+  text-align: center;
 }
 .diseños__titulo {
   font-family: "Mochiy Pop P One";
@@ -49,45 +47,46 @@ a {
   flex-flow: column nowrap;
   align-items: center;
 }
-.contacto{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+.contacto {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-.contacto__titulo{
+.contacto__titulo {
   font-family: "Mochiy Pop P One";
   text-align: center;
 }
-.contacto__campo{
+.contacto__campo {
   height: 2em;
   margin: 1em;
   display: flex;
   flex-direction: column;
-  border: 0.4em solid black;
+  background-color: transparent;
 }
-#campo_de_texto{
+#campo_de_texto {
   height: 10em;
 }
-.contacto__boton{
+.contacto__boton {
   text-decoration: none;
   font-family: Dosis;
-  font-weight: bold;
-  border: 0.25em solid rgb(0, 0, 0);
 }
-*::-webkit-input-placeholder{
+*::-webkit-input-placeholder {
   font-family: Dosis;
   font-size: 130%;
   font-weight: bold;
+  color: black;
 }
-*::-moz-placeholder{
+*::-moz-placeholder {
   font-family: Dosis;
   font-size: 130%;
   font-weight: bold;
+  color: black;
 }
-*:-ms-input-placeholder{
+*:-ms-input-placeholder {
   font-family: Dosis;
   font-size: 130%;
   font-weight: bold;
+  color: black;
 }
 footer {
   grid-area: footer;
@@ -106,14 +105,9 @@ footer {
   font-family: Roboto;
   color: #ffffff;
 }
-
-
-@media screen and (min-width: 320px) {
-  #cabecera {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 1em;
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  #logo {
+    font-size: 150%;
   }
   ul {
     display: flex;
@@ -153,30 +147,51 @@ footer {
   .diseños__titulo {
     margin-top: 2em;
   }
+  .contacto_ubicacion {
+    display: flex;
+    flex-flow: column nowrap;
+  }
   .ubicacion__titulo {
     margin-top: 1em;
   }
   .ubicacion__mapa2 {
     display: none;
   }
-  .contacto__titulo{
+  .contacto__titulo {
     margin-top: 1em;
   }
-  .contacto__campo{
+  .contacto__campo {
     width: 20em;
   }
-  .contacto__campo{
+  .contacto__campo {
     width: 20em;
   }
-  .contacto__boton{
+  .contacto__boton {
     width: 5em;
     height: 2em;
     transform: translateX(17em);
     margin-bottom: 2em;
   }
-  .footer__logo,
-  .footer__instagram {
+  .footer__logo {
     display: none;
+  }
+  .div_telefonos {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding-left: 1.5em;
+    position: relative;
+    top: 1.5em;
+  }
+  .div_derechos {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  .footer__instagram {
+    position: relative;
+    top: -1.5em;
   }
   footer {
     display: flex;
@@ -190,40 +205,35 @@ footer {
   body {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 8em 32em 5em;
+    grid-template-rows: 15% auto 10%;
     grid-template-areas: "header" "section" "footer";
   }
-  #instagram {
-    display: none;
+  #logo {
+    font-size: 250%;
+    margin-left: 0.75em;
   }
-  header {
-    grid-area: header;
+  .navegador {
+    background-color: transparent;
     width: auto;
-    height: 4em;
-    margin: 2em;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
-    grid-area: header;
+    margin-top: 2em;
   }
-  nav {
-    width: 45em;
-    height: 4em;
+  .items-personalizados {
+    font-size: 150%;
   }
   ul {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    gap: 2.5em;
+    padding-right: 1em;
   }
-  .navegador {
-    font-size: 150%;
+  .items-personalizados:hover {
+    text-shadow: 0.1em 0.1em 0.05em #85bdbf;
   }
   section {
     grid-area: section;
   }
   .inicio {
-    background-image: url("./imagenes/circulo_section_index.png");
-    background-size: cover;
     width: auto;
     display: flex;
     justify-content: center;
@@ -253,25 +263,39 @@ footer {
   .nosotros__imagen {
     width: 25em;
     height: 30em;
+    margin-top: 3em;
   }
   .nosotros__parrafo {
-    width: 20em;
+    width: 25em;
+    height: auto;
     font-size: 180%;
     margin-top: 1em;
-    margin-right: 2em;
+    margin-right: -2em;
+    padding: 1em;
+  }
+  #diseños {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% auto 5%;
+    grid-template-areas: "header" "section" "footer";
   }
   .diseños {
-    padding-top: 3em;
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: 3em;
   }
   .diseños__titulo {
     font-size: 200%;
+    margin-top: 2em;
   }
   .diseños__imagenes {
+    width: 750px !important;
+    height: 600px;
+  }
+  .contacto_ubicacion {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   .ubicacion__mapa1 {
     display: none;
@@ -279,27 +303,37 @@ footer {
   .ubicacion__mapa2 {
     display: inline;
   }
-  .ubicacion__direccion{
+  .ubicacion__direccion {
     font-size: 120%;
     margin-bottom: 2em;
   }
-  .contacto__titulo{
+  .contacto__titulo {
     font-size: 220%;
   }
-  .contacto__campo{
+  .contacto__campo {
     width: 40em;
     height: 2em;
   }
-  .contacto__boton{
+  .contacto__boton {
     width: 5em;
     height: 1.875em;
     font-size: 110%;
     transform: translateX(26.7em);
-}
+  }
+  .shop {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15% auto 10%;
+    grid-template-areas: "header" "section" "footer";
+  }
+  .tienda {
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
   footer {
     grid-area: footer;
     width: auto;
-    height: 5em;
+    height: 6em;
     background-color: #57737a;
     display: flex;
     flex-direction: row;
@@ -310,7 +344,7 @@ footer {
   .footer__logo {
     display: inline;
     font-size: 150%;
-    margin-left: -2em;
+    margin-left: 0.5em;
   }
   .footer__telefono {
     padding-left: 0.5em;
@@ -319,6 +353,8 @@ footer {
     display: flex;
     justify-content: flex-end;
     padding-right: 0.5em;
+    position: relative;
+    top: 0.15em;
   }
   .footer__derechos {
     padding-right: 0.5em;
