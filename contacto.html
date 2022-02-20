@@ -58,11 +58,15 @@
                 <input type="text" class="form-control contacto__campo" placeholder="Nombre" name="name" required>
               </div>
               <div class="mb-3">
-                <input type="email" class="contacto__campo" placeholder="Email" name="_replyto" required>
+                <input type="email" class="form-control contacto__campo" placeholder="Email" name="_replyto" required>
               </div>
-              <input type="text" class="contacto__campo" placeholder="Telefono" name="telefono" required>
-              <textarea name="message" class="contacto__campo" id="campo_de_texto" id="" cols="30" rows="10" placeholder="Mensaje de contacto" required></textarea>
-              <input type="submit" value="Enviar" class="btn btn-light contacto__boton">
+              <div class="mb-3">
+                <input type="text" class="form-control contacto__campo" placeholder="Telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <textarea name="message" class="form-control contacto__campo" id="campo_de_texto" id="" cols="30" rows="10" placeholder="Mensaje de contacto" required></textarea>
+              </div>
+              <input type="submit" value="Enviar" class="btn contacto__boton">
           </form>
       </section>
   </div>

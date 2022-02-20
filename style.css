@@ -88,6 +88,9 @@ a {
   font-weight: bold;
   color: black;
 }
+.navegador-lateral{
+  font-family: Dosis;
+}
 footer {
   grid-area: footer;
   width: auto;
@@ -249,6 +252,7 @@ footer {
     width: auto;
     height: 3em;
     font-size: 220%;
+    margin-top: 2em;
   }
   .inicio__parrafo {
     font-size: 170%;
@@ -329,6 +333,20 @@ footer {
   .tienda {
     margin-top: 2em;
     margin-bottom: 4em;
+  }
+  .navegador-lateral{
+    border-right: 0.1em solid black;
+    height: 21em;
+    font-size: 120%;
+  }
+  #cards1{
+    display: flex;
+    justify-content: space-around;
+  }
+  #cards2{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1.1em;
   }
   footer {
     grid-area: footer;
