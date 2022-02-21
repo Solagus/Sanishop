@@ -133,6 +133,22 @@ footer {
   .inicio__parrafo {
     font-size: 150%;
   }
+  .iconos{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1.5em;
+  }
+  .iconos__baño{
+    margin-bottom: 1.5em;
+  }
+  .iconos__cocina{
+    margin-bottom: 1.5em;
+  }
+  .iconos__armario{
+    margin-bottom: 1.5em;
+  }
   .nosotros__imagen {
     width: 10em;
     height: 15em;
@@ -175,6 +191,24 @@ footer {
     height: 2em;
     transform: translateX(17em);
     margin-bottom: 2em;
+  }
+  .tienda_sin_filtro{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+  .navegador_tienda{
+    display: flex;
+    flex-flow: row nowrap !important;
+    justify-content: space-evenly;
+  }
+  .cards1{
+    display: flex;
+    align-items: center;
+  }
+  .cards2{
+    display: flex;
+    align-items: center;
   }
   .footer__logo {
     display: none;
