@@ -5,6 +5,7 @@
 }
 body {
   background-image: url("./img/marble-4700915_1920.jpg");
+  background-size: cover;
 }
 #logo {
   font-family: Lobster;
@@ -211,6 +212,12 @@ footer {
     grid-template-rows: 15% auto 10%;
     grid-template-areas: "header" "section" "footer";
   }
+  .index{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15% 50% 25% 10%;
+    grid-template-areas: "header" "section" "iconos" "footer";
+  }
   #logo {
     font-size: 250%;
     margin-left: 0.75em;
@@ -256,6 +263,36 @@ footer {
   }
   .inicio__parrafo {
     font-size: 170%;
+  }
+  .iconos{
+    height: 10em;
+    grid-area: iconos;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+  }
+  .iconos__baño{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    border-right: 0.1em solid #85bdbf;
+  }
+  .iconos__cocina{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    border-right: 0.1em solid #85bdbf;
+  }
+  .iconos__armario{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
   }
   .nosotros {
     width: auto;
