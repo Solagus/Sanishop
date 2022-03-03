@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  background-image: url("./img/marble-4700915_1920.jpg");
+  background-image: url("../img/marble-4700915_1920.jpg");
   background-size: cover;
 }
 #logo {
@@ -31,10 +31,6 @@ a {
   text-align: center;
 }
 .diseños__titulo {
-  font-family: "Mochiy Pop P One";
-  text-align: center;
-}
-.ubicacion__titulo {
   font-family: "Mochiy Pop P One";
   text-align: center;
 }
@@ -183,9 +179,6 @@ footer {
   .contacto__campo {
     width: 20em;
   }
-  .contacto__campo {
-    width: 20em;
-  }
   .contacto__boton {
     width: 5em;
     height: 2em;
@@ -308,7 +301,7 @@ footer {
     margin-top: 3em;
     margin-bottom: 5em;
   }
-  .iconos__baño{
+  .iconos__bano{
     width: 20em;
     height: 5em;
     display: flex;
