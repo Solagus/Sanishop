@@ -30,9 +30,13 @@ a {
   font-family: Dosis;
   text-align: center;
 }
+.diseños{
+  margin-bottom: -4em;
+}
 .diseños__titulo {
   font-family: "Mochiy Pop P One";
   text-align: center;
+  margin-bottom: 1em;
 }
 .ubicacion__direccion {
   font-family: Dosis;
@@ -84,6 +88,9 @@ a {
   font-size: 130%;
   font-weight: bold;
   color: black;
+}
+.tienda_sin_filtro{
+  margin-bottom: 2em;
 }
 .navegador-lateral{
   font-family: Dosis;
@@ -358,7 +365,7 @@ footer {
   }
   .diseños__imagenes {
     width: 750px !important;
-    height: 600px;
+    height: 600px !important;
   }
   .contacto_ubicacion {
     display: flex;
@@ -386,7 +393,7 @@ footer {
     width: 5em;
     height: 1.875em;
     font-size: 110%;
-    transform: translateX(26.7em);
+    transform: translateX(32em);
   }
   .shop {
     display: grid;
