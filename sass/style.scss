@@ -23,17 +23,21 @@ a {
 }
 .inicio {
   .inicio__titulo {
-    font: $fuenteTitulo;
+    font-family: "Mochiy Pop P One";
+    text-align: center;
   }
   .inicio__parrafo {
-    font: $fuenteParrafo;
+    font-family: Dosis;
+    text-align: center;
   }
 }
 .nosotros__parrafo {
-  font: $fuenteParrafo;
+  font-family: Dosis;
+  text-align: center;
 }
 .diseños__titulo {
-  font: $fuenteTitulo;
+  font-family: "Mochiy Pop P One";
+  text-align: center;
 }
 @mixin flex-column {
   display: flex;
@@ -43,7 +47,8 @@ a {
   @include flex-column;
   align-items: center;
   .ubicacion__direccion {
-    font: $fuenteParrafo;
+    font-family: Dosis;
+    text-align: center;
     font-weight: bold;
   }
 }
@@ -51,7 +56,8 @@ a {
   @include flex-column;
   align-items: center;
   .contacto__titulo {
-    font: $fuenteTitulo;
+    font-family: "Mochiy Pop P One";
+    text-align: center;
   }
   .contacto__campo {
     height: 2em;
