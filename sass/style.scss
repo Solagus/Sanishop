@@ -1,27 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lobster&family=Mochiy+Pop+P+One&family=Roboto:wght@100&display=swap");
-@import "variables";
+/*Variables*/
+$celeste: #85bdbf;
+$azul-oscuro: #57737a;
 * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-image: url("../img/marble-4700915_1920.jpg");
-  background-size: cover;
-}
-header {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url("../img/marble-4700915_1920.jpg");
+    background-size: cover;
+  }
   #logo {
     font-family: Lobster;
+  }
+  a {
+    text-decoration: none;
+    outline: none;
+    color: black !important;
   }
   .items-personalizados {
     font-family: Dosis;
   }
-}
-a {
-  text-decoration: none;
-  outline: none;
-  color: black !important;
-}
-.inicio {
   .inicio__titulo {
     font-family: "Mochiy Pop P One";
     text-align: center;
@@ -30,12 +29,11 @@ a {
     font-family: Dosis;
     text-align: center;
   }
-}
-.nosotros__parrafo {
-  font-family: Dosis;
-  text-align: center;
-}
-.diseños__titulo {
+  .nosotros__parrafo {
+    font-family: Dosis;
+    text-align: center;
+  }
+  .diseños__titulo {
   font-family: "Mochiy Pop P One";
   text-align: center;
 }
@@ -114,20 +112,21 @@ footer {
     color: white;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  header {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     #logo {
       font-size: 150%;
     }
+    nav{
+      margin-right: 1em;
+    }
     ul {
       display: flex;
+      flex-flow: row nowrap;
       justify-content: space-around;
     }
     .navegador {
       font-size: 120%;
     }
-  }
-  .inicio {
     .inicio__texto {
       @include flex-column();
       justify-content: center;
@@ -139,21 +138,24 @@ footer {
     .inicio__parrafo {
       font-size: 150%;
     }
-  }
-  .iconos {
-    @include flex-column();
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 1.5em;
-    @each $icono in bano, cocina, armario {
-      .iconos__#{$icono} {
-        margin-bottom: 1.5em;
-      }
+    .iconos{
+      @include flex-column();
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1.5em;
     }
-  }
-  .nosotros {
+    .iconos__baño{
+      margin-bottom: 1.5em;
+    }
+    .iconos__cocina{
+      margin-bottom: 1.5em;
+    }
+    .iconos__armario{
+      margin-bottom: 1.5em;
+    }
     .nosotros__imagen {
-      @include sizes(10em, 15em);
+      width: 10em;
+      height: 15em;
       display: block;
       margin: auto;
     }
@@ -161,23 +163,22 @@ footer {
       font-size: 130%;
       text-align: center;
     }
-  }
-  .diseños {
-    @include flex-column();
-    justify-content: center;
+    .diseños {
+      @include flex-column();
+      justify-content: center;
+      margin-bottom: 5em;
+    }
     .diseños__titulo {
       margin-top: 2em;
     }
-  }
-  .contacto {
-    .contacto__ubicacion {
+    .contacto_ubicacion {
       @include flex-column();
-      .ubicacion__titulo {
-        margin-top: 1em;
-      }
-      .ubicacion__mapa2 {
-        display: none;
-      }
+    }
+    .ubicacion__titulo {
+      margin-top: 1em;
+    }
+    .ubicacion__mapa2 {
+      display: none;
     }
     .contacto__titulo {
       margin-top: 1em;
@@ -186,31 +187,36 @@ footer {
       width: 20em;
     }
     .contacto__boton {
-      @include sizes(5em, 2em);
+      width: 5em;
+      height: 2em;
       transform: translateX(17em);
       margin-bottom: 2em;
     }
-  }
-  .tienda_sin_filtro {
-    @include flex-column();
-    justify-content: space-around;
-    .navegador_tienda {
-      display: flex;
-      flex-flow: row nowrap !important;
+    .tienda_sin_filtro{
+      @include flex-column();
       justify-content: space-evenly;
     }
-    @for $i from 1 to 3 {
-      .cards#{$i} {
-        display: flex;
-        align-items: center;
-      }
+    .navegador_tienda{
+      width: auto;
+      display: flex;
+      flex-flow: row nowrap !important;
+      justify-content: space-between;
+      margin-left: -1em;
     }
-  }
-  footer {
-    @include flex-column();
-    justify-content: center;
-    text-align: center;
-    font-size: 120%;
+    .cards1{
+      display: flex;
+      align-items: center;
+    }
+    .cards2{
+      display: flex;
+      align-items: center;
+    }
+    .vanitorys{
+      margin-left: 2em;
+    }
+    .asientos{
+      margin-left: 2em;
+    }
     .footer__logo {
       display: none;
     }
@@ -231,34 +237,93 @@ footer {
       position: relative;
       top: -1.5em;
     }
+    footer {
+      @include flex-column();
+      justify-content: center;
+      text-align: center;
+      font-size: 120%;
+    }
   }
-}
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  @mixin grid {
-    display: grid;
-    grid-template-columns: auto;
+  @media screen and (min-width:768px) {
+    #diseños{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 15% auto 10%;
+      grid-template-areas: "header" "section" "footer";
+    }
+    section{
+      grid-area: section;
+    }
+    .inicio__texto{
+      margin-top: 3em;
+    }
+    .iconos{
+      height: 10em;
+      grid-area: iconos;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3em;
+      margin-bottom: 2em;
+    }
+    .iconos__bano{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      border-right: 0.1em solid #85bdbf;
+    }
+    .iconos__cocina{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      border-right: 0.1em solid #85bdbf;
+    }
+    .iconos__armario{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .asientos{
+      margin-left: 5em;
+    }
+    footer {
+      grid-area: footer;
+      width: auto;
+      height: 6em;
+      background-color: #57737a;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      line-height: 1.7;
+    }
+    .footer__instagram {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.5em;
+      position: relative;
+      top: 0.15em;
+    }
+    
   }
-  body {
-    @include grid();
-    grid-template-rows: 15% auto 10%;
-    grid-template-areas: "header" "section" "footer";
-  }
-  .index {
-    @include grid();
-    grid-template-rows: 15% 50% 25% 10%;
-    grid-template-areas: "header" "section" "iconos" "footer";
-  }
-  #diseños {
-    @include grid();
-    grid-template-rows: 10% auto 5%;
-    grid-template-areas: "header" "section" "footer";
-  }
-  .shop{
-    @include grid();
-    grid-template-rows: 15% auto 10%;
-    grid-template-areas: "header" "section" "footer";
-  }
-  header {
+  @media screen and (min-width: 1200px) {
+    body {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 15% auto 10%;
+      grid-template-areas: "header" "section" "footer";
+    }
+    .index{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 15% 50% 25% 10%;
+      grid-template-areas: "header" "section" "iconos" "footer";
+    }
     #logo {
       font-size: 250%;
       margin-left: 0.75em;
@@ -272,137 +337,169 @@ footer {
     }
     .items-personalizados {
       font-size: 150%;
-      &:hover {
-        text-shadow: 0.1em 0.1em 0.05em #85bdbf;
-      }
     }
     ul {
       display: flex;
       gap: 2.5em;
       padding-right: 1em;
     }
-  }
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-  }
-  section {
-    grid-area: section;
+    .items-personalizados:hover {
+      text-shadow: 0.1em 0.1em 0.05em #85bdbf;
+    }
+    section {
+      grid-area: section;
+    }
     .inicio {
       width: auto;
-      @include flex-center();
+      display: flex;
+      justify-content: center;
       align-content: space-between;
-      .inicio__texto {
-        width: 50em;
-        @include flex-column();
-        justify-content: center;
-        .inicio__titulo {
-          @include sizes(auto, 3em);
-          font-size: 220%;
-          margin-top: 2em;
-        }
-        .inicio__parrafo {
-          font-size: 170%;
-        }
-      }
+    }
+    .inicio__texto {
+      width: 50em;
+      @include flex-column();
+      justify-content: center;
+    }
+    .inicio__titulo {
+      width: auto;
+      height: 3em;
+      font-size: 220%;
+      margin-top: 2em;
+    }
+    .inicio__parrafo {
+      font-size: 170%;
+    }
+    .iconos{
+      height: 10em;
+      grid-area: iconos;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3em;
+      margin-bottom: 5em;
+    }
+    .iconos__bano{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      border-right: 0.1em solid #85bdbf;
+    }
+    .iconos__cocina{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      border-right: 0.1em solid #85bdbf;
+    }
+    .iconos__armario{
+      width: 20em;
+      height: 5em;
+      display: flex;
+      justify-content: center;
     }
     .nosotros {
       width: auto;
       display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
       justify-content: space-evenly;
-      .nosotros__imagen {
-        @include sizes(25em, 30em);
-        margin-top: 3em;
-      }
-      .nosotros__parrafo {
-        @include sizes(25em, auto);
-        font-size: 180%;
-        margin-top: 1em;
-        margin-right: -2em;
-        padding: 1em;
-      }
     }
-    .diseños{
-      @include flex-column();
+    .nosotros__imagen {
+      width: 25em;
+      height: 30em;
+      margin-top: 3em;
+    }
+    .nosotros__parrafo {
+      width: 25em;
+      height: auto;
+      font-size: 180%;
+      margin-top: 1em;
+      margin-right: -2em;
+      padding: 1em;
+    }
+    #diseños {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 10% auto 5%;
+      grid-template-areas: "header" "section" "footer";
+    }
+    .diseños {
+      @include flex-column()
       margin-bottom: 3em;
-      .diseños__titulo {
-        font-size: 200%;
-        margin-top: 2em;
-      }
-      .diseños__imagenes{
-        @include sizes(750px, 600px);
-      }
     }
-    .contacto{
-      .contacto_ubicacion {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-      }
-      .ubicacion__mapa1 {
-        display: none;
-      }
-      .ubicacion__mapa2 {
-        display: inline;
-      }
-      .ubicacion__direccion {
-        font-size: 120%;
-        margin-bottom: 2em;
-      }
-      .contacto__titulo {
-        font-size: 220%;
-      }
-      .contacto__campo{
-        @include sizes(40em, 2em)
-      }
+    .diseños__titulo {
+      font-size: 200%;
+      margin-top: 2em;
     }
-    .tienda {
+    .diseños__imagenes {
+      width: 750px !important;
+      height: 600px !important;
+    }
+    .contacto_ubicacion {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+    .ubicacion__mapa1 {
+      display: none;
+    }
+    .ubicacion__mapa2 {
+      display: inline;
+    }
+    .ubicacion__direccion {
+      font-size: 120%;
+      margin-bottom: 2em;
+    }
+    .contacto__titulo {
+      font-size: 220%;
+    }
+    .contacto__campo {
+      width: 40em;
+      height: 2em;
+    }
+    .contacto__boton {
+      width: 5em;
+      height: 1.875em;
+      font-size: 110%;
+      transform: translateX(32em);
+    }
+    .shop {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 15% auto 10%;
+      grid-template-areas: "header" "section" "footer";
+    }
+    .tienda_sin_filtro {
       margin-top: 2em;
       margin-bottom: 4em;
-      .navegador-lateral{
-        border-right: 0.1em solid black;
-        height: 21em;
-        font-size: 120%;
-      }
-      #cards1{
-        display: flex;
-        justify-content: space-around;
-      }
-      #cards2{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 1.1em;
-      }
     }
-  }
-  .iconos {
-    @include sizes(auto, 10em);
-    grid-area: iconos;
-    @include flex-center();
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: 5em;
-    .iconos__armario {
-      @include sizes(20em, 5em);
-      @include flex-center;
+    .navegador-lateral{
+      border-right: 0.1em solid black;
+      height: 21em;
+      font-size: 120%;
     }
-    .iconos__bano {
-      @extend .iconos__armario;
-      border-right: 0, 1em solid $celeste;
+    #cards1{
+      display: flex;
+      justify-content: space-around;
     }
-    .iconos__cocina {
-      @extend .iconos__bano;
+    #cards2{
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 1.1em;
     }
-  }
-  footer {
-    grid-area: footer;
-    @include sizes(auto, 6em);
-    background-color: $azul-oscuro;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    line-height: 1.7;
+    footer {
+      grid-area: footer;
+      width: auto;
+      height: 6em;
+      background-color: #57737a;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      line-height: 1.7;
+    }
     .footer__logo {
       display: inline;
       font-size: 150%;
@@ -422,4 +519,3 @@ footer {
       padding-right: 0.5em;
     }
   }
-}
