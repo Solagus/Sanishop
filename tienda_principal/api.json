@@ -1,0 +1,8 @@
+[
+    {"id":0, "nombre": "Griferia California", "imagen":"../img/griferia-fv/california.jpg", "cantidad": 1, "stock": 5, "precio": 10000},
+    {"id":1, "nombre": "Vanitory 50X40X80", "imagen":"../img/Vanitorys/vanitory1.jpeg", "cantidad": 1, "stock": 3, "precio": 13000},
+    {"id":2, "nombre": "Griferia Epuyen", "imagen":"../img/griferia-fv/Epuyen.jpg", "cantidad": 1, "stock": 2, "precio": 15000},
+    {"id":3, "nombre": "Jabonera Dominic", "imagen":"../img/Accesorios/jabonera-dominic.jpg", "cantidad": 1, "stock": 6, "precio": 5000},
+    {"id":4, "nombre": "Asiento Florencia", "imagen":"../img/Asiento-de-inodoro/tapa-de-asiento-florencia.jpg", "cantidad": 1, "stock": 4, "precio": 10000},
+    {"id":5, "nombre": "Portarrollos Urbano", "imagen":"../img/Accesorios/portarrollos-urbano.jpg", "cantidad": 1, "stock": 5, "precio": 4000}
+]

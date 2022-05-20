@@ -92,6 +92,15 @@ $azul-oscuro: #57737a;
 .navegador-lateral {
   font-family: Dosis;
 }
+.card{
+  border-color: #636e70;
+  box-shadow: 0.2em 0.2em 1em #57737a;
+}
+.btn-card{
+  background-color: #85bdbf;
+  font-weight: bold;
+  color: white !important;
+}
 @mixin sizes($width, $height) {
   width: $width;
   height: $height;
@@ -426,7 +435,7 @@ footer {
       grid-template-areas: "header" "section" "footer";
     }
     .diseños {
-      @include flex-column()
+      @include flex-column();
       margin-bottom: 3em;
     }
     .diseños__titulo {

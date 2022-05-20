@@ -110,6 +110,17 @@ a {
   font-family: Dosis;
 }
 
+.card {
+  border-color: #636e70;
+  box-shadow: 0.2em 0.2em 1em #57737a;
+}
+
+.btn-card {
+  background-color: #85bdbf;
+  font-weight: bold;
+  color: white !important;
+}
+
 footer {
   grid-area: footer;
   width: auto;
